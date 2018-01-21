@@ -5,6 +5,7 @@
 // Let's see who can crack the code the fastest!
 
 // Pro-tip: Do not include the creation of the threads as part of the time. 
+package threads;
 
 import java.util.Random;
 
@@ -16,16 +17,131 @@ public class BruteForceCracker {
 	static float elapsedTime;
 	
 	public static void main(String[] args) {
+		
+		Thread t1 = new Thread(()->{
+			for(int i = 0; i < 100000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1 = new Thread(()->{
+			for(int i = 100000000; i < 200000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1 = new Thread(()->{
+			for(int i = 200000000; i < 300000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1t1 = new Thread(()->{
+			for(int i = 300000000; i < 400000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1t1t1 = new Thread(()->{
+			for(int i = 400000000; i < 500000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1t1t1t1 = new Thread(()->{
+			for(int i = 500000000; i < 600000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1t1t1t1t1 = new Thread(()->{
+			for(int i = 600000000; i < 700000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1t1t1t1t1t1 = new Thread(()->{
+			for(int i = 700000000; i < 800000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1t1t1t1t1t1t1 = new Thread(()->{
+			for(int i = 800000000; i < 900000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
+		Thread t1t1t1t1t1t1t1t1t1t1 = new Thread(()->{
+			for(int i = 900000000; i < 1000000000; i++) {
+				if(checkCode(i)) {
+					endTime = System.currentTimeMillis();
+					elapsedTime = (float)(endTime - startTime);
+					elapsedTime /= 1000.f;
+					System.out.println("Total time taken: " + elapsedTime + " seconds");
+				}
+			}
+		});
+		
 		System.out.println("Starting Brute Force Checker");
 		startTime = System.currentTimeMillis();
 		
-		int ctr = 0;
-		while(!checkCode(ctr++));
+		t1.start();
+		t1t1.start();
+		t1t1t1.start();
+		t1t1t1t1.start();
+		t1t1t1t1t1.start();
+		t1t1t1t1t1t1.start();
+		t1t1t1t1t1t1t1.start();
+		t1t1t1t1t1t1t1t1.start();
+		t1t1t1t1t1t1t1t1t1.start();
+		t1t1t1t1t1t1t1t1t1t1.start();
 		
-		endTime = System.currentTimeMillis();
-		elapsedTime = (float)(endTime - startTime);
-		elapsedTime /= 1000.f;
-		System.out.println("Total time taken: " + elapsedTime + " seconds");
 	}
 	
 	public static boolean checkCode(long p){
